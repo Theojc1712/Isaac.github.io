@@ -4,7 +4,7 @@
         <title>Isaac Challenge !</title>
         <link rel="stylesheet" href="style.css">
     </head>
-    <body onload="myFunction()">
+    <body onload="onLoadFunc()">
 
         <h1><a class="titleLink" href="index.html">SIMON PROGRESSION</a></h1>
         <div id="images">
@@ -110,58 +110,54 @@
         <br><br><br>
         <hr/>
         <br>
-        <p id="demo">Test</p>
         <script type="text/javascript">
-            
-            function myFunction() {
+
+            function onLoadFunc() {
+                var db = openDatabase('simonDB', '1.0', 'databaseSimon', 2 * 1024 * 1024);
+
+                    db.transaction(function (tx) {
+                        tx.executeSql('CREATE TABLE IF NOT EXISTS SIMON1 (text unique)');
+                        tx.executeSql('SELECT * FROM SIMON1', [], function (tx, results) {
+                            var len = results.rows.length, i;
+                            for (i = 0; i < len; i++) {
+                                //alert(results.rows.item(i).text);
+                                var baseImg = document.getElementById(results.rows.item(i).text);
+                                var baseSrc = baseImg.src;
+                                const editedUrl = baseSrc.slice(0, -4);
+                                baseImg.src = editedUrl + "VAL.png";
+                            }
+                          });
+                    });
 
             }
+
             function imageChallenge1(img) {
                 const baseUrl = img.src;
                 if (baseUrl.substr(baseUrl.length - 7) != "VAL.png"){
+                    //alert("yes");
                     const editedUrl = baseUrl.slice(0, -4);
                     img.src = editedUrl + "VAL.png";
 
-                    var data = getData("./Data/simonData1.txt");
-                    data.push(img.id);
-                    var jsonData = JSON.stringify(data);
-                    saveAs(jsonData, "./Data/simonData1.txt");
+                    var db = openDatabase('simonDB', '1.0', 'databaseSimon', 2 * 1024 * 1024);
+
+                    db.transaction(function (tx) {
+                        tx.executeSql('CREATE TABLE IF NOT EXISTS SIMON1 (text unique)');
+                        tx.executeSql('INSERT INTO SIMON1 (text) VALUES (?)', [img.id]);
+                    });
+
                 } else {
                     const editedUrl = baseUrl.slice(0, -7);
                     img.src = editedUrl + ".png";
+
+                    var db = openDatabase('simonDB', '1.0', 'databaseSimon', 2 * 1024 * 1024);
+
+                    db.transaction(function (tx) {
+                        tx.executeSql('CREATE TABLE IF NOT EXISTS SIMON1 (text unique)');
+                        tx.executeSql('DELETE FROM SIMON1 WHERE text = ?', [img.id]);
+                    });
                 }
             }
 
-
-            function imageChallenge2(img) {
-                const baseUrl = img.src;
-                if (baseUrl.substr(baseUrl.length - 7) != "VAL.png"){
-                    const editedUrl = baseUrl.slice(0, -4);
-                    img.src = editedUrl + "VAL.png";
-                } else {
-                    const editedUrl = baseUrl.slice(0, -7);
-                    img.src = editedUrl + ".png";
-                }
-            }
-
-            function getData(baseUrl) {
-                const fs = require('fs');
-
-                fs.readFile(baseUrl, function(err, data) {
-                if (err) throw err;
-
-                const array = data.toString().replace(/\r\n/g, '\n').split('\n');
-
-                for (let i of array) {
-                    console.log(i);
-                }
-                });
-
-                document.getElementById("demo").innerHTML = array[0];
-                return JSON.parse(array[0]);
-            }
         </script>
-
-
     </body>
 </html>
