@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Isaac Challenge !</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body onload="myFunction()">
+
+        <h1><a class="titleLink" href="index.html">SIMON PROGRESSION</a></h1>
+        <div id="images">
+            <img src="./Ressources/Characters/Character_Cain_appearance.png" alt="Cain" class="center">
+            <img src="./Ressources/Characters/Character_Azazel_appearance.png" alt="Azazel" class="center">
+            <img src="./Ressources/Characters/Character_Eve_appearance.png" alt="Eve" class="center">
+        </div>
+
+        <br><br><br>
+        <hr/>
+        <br>
+
+        <h3>Challenge #1 - Unlock all characters</h3>
+        <br><br>
+
+        <div id="challenge1">
+            <img id="Isaac1" src="./Ressources/Characters/Character_Isaac_appearance.png" alt="Isaac" class="center" onclick="imageChallenge1(this)">
+            <img id="Magdalene1" src="./Ressources/Characters/Character_Magdalene_appearance.png" alt="Magdalene" class="center" onclick="imageChallenge1(this)">
+            <img id="Cain1" src="./Ressources/Characters/Character_Cain_appearance.png" alt="Cain" class="center" onclick="imageChallenge1(this)">
+            <img id="Judas1" src="./Ressources/Characters/Character_Judas_appearance.png" alt="Judas" class="center" onclick="imageChallenge1(this)">
+            <img id="BlueBaby1" src="./Ressources/Characters/Character_BlueBaby_appearance.png" alt="???" class="center" onclick="imageChallenge1(this)">
+            <img id="Eve1" src="./Ressources/Characters/Character_Eve_appearance.png" alt="Eve" class="center" onclick="imageChallenge1(this)">
+            <img id="Samson1" src="./Ressources/Characters/Character_Samson_appearance.png" alt="Samson" class="center" onclick="imageChallenge1(this)">
+            <img id="Azazel1" src="./Ressources/Characters/Character_Azazel_appearance.png" alt="Azazel" class="center" onclick="imageChallenge1(this)">
+            <img id="Lazarus1" src="./Ressources/Characters/Character_Lazarus_appearance.png" alt="Lazarus" class="center" onclick="imageChallenge1(this)">
+            <img id="Eden1" src="./Ressources/Characters/Character_Eden_appearance.png" alt="Eden" class="center" onclick="imageChallenge1(this)">
+            <img id="Lost1" src="./Ressources/Characters/Character_The_Lost_appearance.png" alt="The lost" class="center" onclick="imageChallenge1(this)">
+            <img id="Lilith1" src="./Ressources/Characters/Character_Lilith_appearance.png" alt="Lilith" class="center" onclick="imageChallenge1(this)">
+            <img id="Keeper1" src="./Ressources/Characters/Character_Keeper_appearance.png" alt="Keeper" class="center" onclick="imageChallenge1(this)">
+            <img id="Apollyon1" src="./Ressources/Characters/Character_Apollyon_appearance.png" alt="Apollyon" class="center" onclick="imageChallenge1(this)">
+            <img id="Forgotten1" src="./Ressources/Characters/Character_The_Forgotten_appearance.png" alt="Forgotten" class="center" onclick="imageChallenge1(this)">
+            <img id="Bethany1" src="./Ressources/Characters/Character_Bethany_appearance.png" alt="Bethany" class="center" onclick="imageChallenge1(this)">
+            <img id="Jacob1" src="./Ressources/Characters/Character_Jacob_and_Esau_appearance.png" alt="JacobAndEsau" class="center" onclick="imageChallenge1(this)"> 
+        </div>
+        <br>
+        <div id="challenge1">
+            <img id="TaintedIsaac1" src="./Ressources/Characters/Character_Tainted_Isaac_appearance.png" alt="Isaac" class="center" onclick="imageChallenge1(this)">
+            <img id="TaintedMagdalene1" src="./Ressources/Characters/Character_Tainted_Magdalene_appearance.png" alt="Magdalene" class="center" onclick="imageChallenge1(this)">
+            <img id="TaintedCain1" src="./Ressources/Characters/Tainted_Cain_App.png" alt="Cain" class="center" onclick="imageChallenge1(this)">
+            <img id="TaintedJudas1" src="./Ressources/Characters/Tainted_Judas_App.png" alt="Judas" class="center" onclick="imageChallenge1(this)">
+            <img id="TaintedBlueBaby1" src="./Ressources/Characters/Tainted_Blue_Baby_App.png" alt="???" class="center" onclick="imageChallenge1(this)">
+            <img id="TaintedEve1" src="./Ressources/Characters/Tainted_Eve_App.png" alt="Eve" class="center" onclick="imageChallenge1(this)">
+            <img id="TaintedSamson1" src="./Ressources/Characters/Tainted_Samson_App.png" alt="Samson" class="center" onclick="imageChallenge1(this)">
+            <img id="TaintedAzazel1" src="./Ressources/Characters/Tainted_Azazel_App.png" alt="Azazel" class="center" onclick="imageChallenge1(this)">
+            <img id="TaintedLazarus1" src="./Ressources/Characters/Tainted_Lazarus_App.png" alt="Lazarus" class="center" onclick="imageChallenge1(this)">
+            <img id="TaintedEden1" src="./Ressources/Characters/Character_Tainted_Eden_appearance.png" alt="Eden" class="center" onclick="imageChallenge1(this)">
+            <img id="TaintedLost1" src="./Ressources/Characters/Tainted_Lost_App.png" alt="The lost" class="center" onclick="imageChallenge1(this)">
+            <img id="TaintedLilith1" src="./Ressources/Characters/Tainted_Lilith_App.png" alt="Lilith" class="center" onclick="imageChallenge1(this)">
+            <img id="TaintedKeeper1" src="./Ressources/Characters/Tainted_Keeper_App.png" alt="Keeper" class="center" onclick="imageChallenge1(this)">
+            <img id="TaintedApollyon1" src="./Ressources/Characters/Tainted_Apollyon_App.png" alt="Apollyon" class="center" onclick="imageChallenge1(this)">
+            <img id="TaintedForgotten1" src="./Ressources/Characters/Character_Tainted_Forgotten_appearance.png" alt="Forgotten" class="center" onclick="imageChallenge1(this)">
+            <img id="TaintedBethany1" src="./Ressources/Characters/Tainted_Bethany_App.png" alt="Bethany" class="center" onclick="imageChallenge1(this)">
+            <img id="TaintedJacob1" src="./Ressources/Characters/Tainted_Jacob_App.png" alt="JacobAndEsau" class="center" onclick="imageChallenge1(this)"> 
+        </div>
+
+        <br><br><br>
+        <hr/>
+        <br>
+
+        <h3>Challenge #2 - Win at least ONE victory mark</h3>
+        <br><br>
+
+        <div id="challenge2">
+            <img id="Isaac2" src="./Ressources/Characters/Character_Isaac_appearance.png" alt="Isaac" class="center" onclick="imageChallenge1(this)">
+            <img id="Magdalene2" src="./Ressources/Characters/Character_Magdalene_appearance.png" alt="Magdalene" class="center" onclick="imageChallenge1(this)">
+            <img id="Cain2" src="./Ressources/Characters/Character_Cain_appearance.png" alt="Cain" class="center" onclick="imageChallenge1(this)">
+            <img id="Judas2" src="./Ressources/Characters/Character_Judas_appearance.png" alt="Judas" class="center" onclick="imageChallenge1(this)">
+            <img id="BlueBaby2" src="./Ressources/Characters/Character_BlueBaby_appearance.png" alt="???" class="center" onclick="imageChallenge1(this)">
+            <img id="Eve2" src="./Ressources/Characters/Character_Eve_appearance.png" alt="Eve" class="center" onclick="imageChallenge1(this)">
+            <img id="Samson2" src="./Ressources/Characters/Character_Samson_appearance.png" alt="Samson" class="center" onclick="imageChallenge1(this)">
+            <img id="Azazel2" src="./Ressources/Characters/Character_Azazel_appearance.png" alt="Azazel" class="center" onclick="imageChallenge1(this)">
+            <img id="Lazarus2" src="./Ressources/Characters/Character_Lazarus_appearance.png" alt="Lazarus" class="center" onclick="imageChallenge1(this)">
+            <img id="Eden2" src="./Ressources/Characters/Character_Eden_appearance.png" alt="Eden" class="center" onclick="imageChallenge1(this)">
+            <img id="Lost2" src="./Ressources/Characters/Character_The_Lost_appearance.png" alt="The lost" class="center" onclick="imageChallenge1(this)">
+            <img id="Lilith2" src="./Ressources/Characters/Character_Lilith_appearance.png" alt="Lilith" class="center" onclick="imageChallenge1(this)">
+            <img id="Keeper2" src="./Ressources/Characters/Character_Keeper_appearance.png" alt="Keeper" class="center" onclick="imageChallenge1(this)">
+            <img id="Apollyon2" src="./Ressources/Characters/Character_Apollyon_appearance.png" alt="Apollyon" class="center" onclick="imageChallenge1(this)">
+            <img id="Forgotten2" src="./Ressources/Characters/Character_The_Forgotten_appearance.png" alt="Forgotten" class="center" onclick="imageChallenge1(this)">
+            <img id="Bethany2" src="./Ressources/Characters/Character_Bethany_appearance.png" alt="Bethany" class="center" onclick="imageChallenge1(this)">
+            <img id="Jacob2" src="./Ressources/Characters/Character_Jacob_and_Esau_appearance.png" alt="JacobAndEsau" class="center" onclick="imageChallenge1(this)"> 
+        </div>
+        <br>
+        <div id="challenge2">
+            <img id="TaintedIsaac2" src="./Ressources/Characters/Character_Tainted_Isaac_appearance.png" alt="Isaac" class="center" onclick="imageChallenge1(this)">
+            <img id="TaintedMagdalene2" src="./Ressources/Characters/Character_Tainted_Magdalene_appearance.png" alt="Magdalene" class="center" onclick="imageChallenge1(this)">
+            <img id="TaintedCain2" src="./Ressources/Characters/Tainted_Cain_App.png" alt="Cain" class="center" onclick="imageChallenge1(this)">
+            <img id="TaintedJudas2" src="./Ressources/Characters/Tainted_Judas_App.png" alt="Judas" class="center" onclick="imageChallenge1(this)">
+            <img id="TaintedBlueBaby2" src="./Ressources/Characters/Tainted_Blue_Baby_App.png" alt="???" class="center" onclick="imageChallenge1(this)">
+            <img id="TaintedEve2" src="./Ressources/Characters/Tainted_Eve_App.png" alt="Eve" class="center" onclick="imageChallenge1(this)">
+            <img id="TaintedSamson2" src="./Ressources/Characters/Tainted_Samson_App.png" alt="Samson" class="center" onclick="imageChallenge1(this)">
+            <img id="TaintedAzazel2" src="./Ressources/Characters/Tainted_Azazel_App.png" alt="Azazel" class="center" onclick="imageChallenge1(this)">
+            <img id="TaintedLazarus2" src="./Ressources/Characters/Tainted_Lazarus_App.png" alt="Lazarus" class="center" onclick="imageChallenge1(this)">
+            <img id="TaintedEden2" src="./Ressources/Characters/Character_Tainted_Eden_appearance.png" alt="Eden" class="center" onclick="imageChallenge1(this)">
+            <img id="TaintedLost2" src="./Ressources/Characters/Tainted_Lost_App.png" alt="The lost" class="center" onclick="imageChallenge1(this)">
+            <img id="TaintedLilith2" src="./Ressources/Characters/Tainted_Lilith_App.png" alt="Lilith" class="center" onclick="imageChallenge1(this)">
+            <img id="TaintedKeeper2" src="./Ressources/Characters/Tainted_Keeper_App.png" alt="Keeper" class="center" onclick="imageChallenge1(this)">
+            <img id="TaintedApollyon2" src="./Ressources/Characters/Tainted_Apollyon_App.png" alt="Apollyon" class="center" onclick="imageChallenge1(this)">
+            <img id="TaintedForgotten2" src="./Ressources/Characters/Character_Tainted_Forgotten_appearance.png" alt="Forgotten" class="center" onclick="imageChallenge1(this)">
+            <img id="TaintedBethany2" src="./Ressources/Characters/Tainted_Bethany_App.png" alt="Bethany" class="center" onclick="imageChallenge1(this)">
+            <img id="TaintedJacob2" src="./Ressources/Characters/Tainted_Jacob_App.png" alt="JacobAndEsau" class="center" onclick="imageChallenge1(this)"> 
+        </div>
+
+        <br><br><br>
+        <hr/>
+        <br>
+        <p id="demo">Test</p>
+        <script type="text/javascript">
+            
+            function myFunction() {
+
+            }
+            function imageChallenge1(img) {
+                const baseUrl = img.src;
+                if (baseUrl.substr(baseUrl.length - 7) != "VAL.png"){
+                    const editedUrl = baseUrl.slice(0, -4);
+                    img.src = editedUrl + "VAL.png";
+
+                    var data = getData("./Data/simonData1.txt");
+                    data.push(img.id);
+                    var jsonData = JSON.stringify(data);
+                    saveAs(jsonData, "./Data/simonData1.txt");
+                } else {
+                    const editedUrl = baseUrl.slice(0, -7);
+                    img.src = editedUrl + ".png";
+                }
+            }
+
+
+            function imageChallenge2(img) {
+                const baseUrl = img.src;
+                if (baseUrl.substr(baseUrl.length - 7) != "VAL.png"){
+                    const editedUrl = baseUrl.slice(0, -4);
+                    img.src = editedUrl + "VAL.png";
+                } else {
+                    const editedUrl = baseUrl.slice(0, -7);
+                    img.src = editedUrl + ".png";
+                }
+            }
+
+            function getData(baseUrl) {
+                const fs = require('fs');
+
+                fs.readFile(baseUrl, function(err, data) {
+                if (err) throw err;
+
+                const array = data.toString().replace(/\r\n/g, '\n').split('\n');
+
+                for (let i of array) {
+                    console.log(i);
+                }
+                });
+
+                document.getElementById("demo").innerHTML = array[0];
+                return JSON.parse(array[0]);
+            }
+        </script>
+
+
+    </body>
+</html>
